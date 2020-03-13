@@ -1,0 +1,20 @@
+{
+  "name": "positter",
+  "description": "positter deletes negative tweets from your time line.",
+  "manifest_version": 2,
+  "version": "1.0",
+  "browser_action": {},
+  "content_scripts": [
+    {
+      "matches": [ "https://twitter.com/*" ],
+      "js": [ "js/jquery.min.js", "js/content.js" ]
+    }
+  ],
+  "background": {
+    "scripts": [ "js/jquery.min.js", "js/background.js" ],
+    "persistent": false
+  },
+  "permissions": [
+    "https://xxxxxxxxxx.com/*" // COTOHA APIのアカウントホームページでBase URLを確認
+  ]
+}
